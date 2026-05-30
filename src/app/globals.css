@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --accent: #00b4fd;
+  --accent-strong: #003ace;
+  --page: #eef9fd;
+  --section-dark: #f4fbfd;
+  --section-ink: #071316;
+  --muted: #516a73;
+  --line: rgba(0, 52, 70, 0.14);
+  --surface-elevated: rgba(255, 255, 255, 0.9);
+  --deep-card: #000d12;
+  --light-band: #eaf8ff;
+  --button-outline: rgba(6, 55, 70, 0.32);
+  --button-hover-ink: #000d12;
+  --brand-ink: #071316;
+  --nav-bg: rgba(255, 255, 255, 0.76);
+  --nav-border: rgba(6, 55, 70, 0.16);
+  --nav-button: rgba(255, 255, 255, 0.72);
+  --nav-cta-bg: #000d12;
+  --nav-cta-fg: #ffffff;
+  --nav-cta-border: #000d12;
+  --nav-cta-hover-bg: #ffffff;
+  --nav-cta-hover-fg: #000d12;
+  --font-heading: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.dark {
+  --page: #000d12;
+  --section-dark: #000d12;
+  --section-ink: #f4fbff;
+  --muted: #93aeb8;
+  --line: rgba(129, 211, 255, 0.14);
+  --surface-elevated: rgba(3, 28, 34, 0.88);
+  --deep-card: #001016;
+  --light-band: #eaf8ff;
+  --button-outline: rgba(224, 246, 255, 0.26);
+  --button-hover-ink: #000d12;
+  --brand-ink: #ffffff;
+  --nav-bg: rgba(0, 16, 20, 0.88);
+  --nav-border: rgba(164, 222, 255, 0.16);
+  --nav-button: rgba(255, 255, 255, 0.04);
+  --nav-cta-bg: #000d12;
+  --nav-cta-fg: #ffffff;
+  --nav-cta-border: rgba(244, 251, 255, 0.32);
+  --nav-cta-hover-bg: #ffffff;
+  --nav-cta-hover-fg: #000d12;
+}
+
+@theme inline {
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --font-sans: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--page);
+  color: var(--section-ink);
+  font-family: var(--font-body);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(0, 156, 255, 0.32);
+}
+
+.section-dark {
+  background:
+    radial-gradient(circle at 78% 9%, rgba(0, 180, 253, 0.13), transparent 28rem),
+    var(--section-dark);
+  color: var(--section-ink);
+}
+
+.outline-word {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(0, 180, 253, 0.16);
+  text-stroke: 1px rgba(0, 180, 253, 0.16);
+}
+
+.blueprint-bg::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(circle at 0 45%, transparent 0 12rem, rgba(0, 180, 253, 0.1) 12.1rem 12.2rem, transparent 12.3rem),
+    radial-gradient(circle at 18% 62%, transparent 0 18rem, rgba(0, 58, 206, 0.08) 18.1rem 18.2rem, transparent 18.3rem),
+    linear-gradient(135deg, transparent 0 48%, rgba(0, 180, 253, 0.08) 48.1% 48.2%, transparent 48.3%),
+    linear-gradient(45deg, transparent 0 72%, rgba(0, 58, 206, 0.08) 72.1% 72.2%, transparent 72.3%);
+}
+
+.blueprint-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+.asset-cta-bg {
+  background: #000d12 url("/assets/paperless-cta-background.svg") no-repeat right center / cover;
+}
+
+.dashboard-frame {
+  aspect-ratio: 16 / 9;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 24px 58px rgba(0, 36, 70, 0.2);
+  backdrop-filter: blur(20px);
+}
+
+.animate-float-soft {
+  animation: floatSoft 6s ease-in-out infinite;
+}
+
+.animate-float-soft-reverse {
+  animation: floatSoftReverse 6.6s ease-in-out infinite;
+}
+
+.ticker-track {
+  animation: tickerScroll 28s linear infinite;
+  will-change: transform;
+}
+
+.ticker:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+@keyframes floatSoft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes floatSoftReverse {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes tickerScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
