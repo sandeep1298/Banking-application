@@ -8,7 +8,7 @@ import { Header } from "@/components/layout/Header";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://n7-banking.example"),
+  metadataBase: new URL("https://banking-application-alpha.vercel.app"),
   title: {
     default: "N7 Banking - Modern Digital Banking Foundation",
     template: "%s | N7 Banking"
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description:
     "N7 and CB7 help financial institutions modernize core banking, digital banking, open banking, loan origination, and customer experiences.",
   alternates: {
-    canonical: "/"
+    canonical: "https://banking-application-alpha.vercel.app/"
   },
   icons: {
     icon: "/favicon.svg"
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "N7 Banking - Modern Digital Banking Foundation",
     description:
       "A modern banking platform for connected core, digital, open banking, and lending journeys.",
-    url: "/",
+    url: "https://banking-application-alpha.vercel.app/",
     siteName: "N7 Banking",
     type: "website"
   },

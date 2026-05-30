@@ -11,7 +11,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "N7 Banking",
-  url: "https://n7-banking.example",
+  url: "https://banking-application-alpha.vercel.app",
   brand: [
     {
       "@type": "Brand",
