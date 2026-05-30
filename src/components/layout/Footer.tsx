@@ -34,7 +34,7 @@ export function Footer() {
           <FooterLinks items={footerCompany} title="N7 Banking" />
           <FooterLinks items={footerSocials} title="Our Socials" />
 
-          <p className="relative z-10 col-span-full mt-8 text-center sm:text-left text-sm font-normal leading-[1.4] text-[color:var(--muted)]">
+          <p className="relative z-10 col-span-full mt-8 sm:text-left text-sm font-normal leading-[1.4] text-[color:var(--muted)]">
             Copyright &copy; 2022 by Linktia Infosystems Limited &mdash; [CB7 and N7 as Commercial Brand] &mdash;
             [Registered under the Companies Act 2006 in England and Wales | Number of Incorporation
             13100992]
