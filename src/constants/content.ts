@@ -83,18 +83,18 @@ export const digitalBullets = [
 export const insights: Insight[] = [
   {
     title: "How to transition from a traditional to a digital bank",
-    date: "October 2024",
-    category: "Strategy"
+    date: "GETTING STARTED",
+    category: "David Grohl\u00A0\u00A0\u00A0\u00A017/08/24"
   },
   {
     title: "How to transition from a traditional to a digital bank",
-    date: "October 2024",
-    category: "Execution"
+    date: "GETTING STARTED",
+    category: "David Grohl\u00A0\u00A0\u00A0\u00A017/08/24"
   },
   {
     title: "How to transition from a traditional to a digital bank",
-    date: "October 2024",
-    category: "Growth"
+    date: "GETTING STARTED",
+    category: "David Grohl\u00A0\u00A0\u00A0\u00A017/08/24"
   }
 ];
 

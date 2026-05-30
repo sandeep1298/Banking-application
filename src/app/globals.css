@@ -8,7 +8,8 @@
   --page: #eef9fd;
   --section-dark: #f4fbfd;
   --section-ink: #071316;
-  --muted: #526275;
+  --section-accent: #0b5566;
+  --muted: rgba(82, 98, 117, 0.85);
   --line: rgba(0, 52, 70, 0.14);
   --surface-elevated: rgba(255, 255, 255, 0.9);
   --deep-card: #000d12;
@@ -31,8 +32,8 @@
 .dark {
   --page: #000d12;
   --section-dark: #000d12;
-  --section-ink: #f4fbff;
-  --muted: #E9F4F9;
+  --section-ink: #E9F4F9;
+  --muted: rgba(233, 244, 249, 0.7);
   --line: rgba(129, 211, 255, 0.14);
   --surface-elevated: rgba(3, 28, 34, 0.88);
   --deep-card: #001016;
@@ -40,7 +41,7 @@
   --button-outline: rgba(224, 246, 255, 0.26);
   --button-hover-ink: #000d12;
   --brand-ink: #ffffff;
-  --nav-bg: rgba(0, 16, 20, 0.88);
+  --nav-bg: #2f2f2fb3;
   --nav-border: rgba(164, 222, 255, 0.16);
   --nav-button: rgba(255, 255, 255, 0.04);
   --nav-cta-bg: #000d12;
@@ -48,6 +49,7 @@
   --nav-cta-border: rgba(244, 251, 255, 0.32);
   --nav-cta-hover-bg: #ffffff;
   --nav-cta-hover-fg: #000d12;
+  --section-accent: #64A8C4;
 }
 
 @theme inline {

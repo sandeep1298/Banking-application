@@ -60,11 +60,11 @@ function InsightCard({ insight, featured = false }: InsightCardProps) {
         />
       </div>
       <div className={featured ? "self-center" : "mt-5"}>
-        <p className="text-xs text-accent">{insight.date}</p>
+        <p className="text-xs font-regular text-accent">{insight.date}</p>
         <h3 className="mt-3 text-balance text-xl font-semibold leading-tight text-[color:var(--section-ink)]">
           {insight.title}
         </h3>
-        <p className="mt-3 text-xs text-[color:var(--muted)]">{insight.category}</p>
+        <p className="mt-3 text-xs text-[color:var(--section-accent)]">{insight.category}</p>
         <a
           className="mt-6 inline-flex min-h-8 w-full items-center justify-center rounded border border-[color:var(--line)] text-xs font-semibold text-[color:var(--muted)] transition group-hover:border-accent group-hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
           href="#case-studies"

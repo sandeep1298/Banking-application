@@ -101,7 +101,7 @@ export function CaseStudiesSection() {
                       />
                     </div>
                     <div className="p-8 md:p-10">
-                      <p className="text-xs font-semibold text-accent">{study.category}</p>
+                      <p className="text-xs font-regular text-accent">{study.category}</p>
                       <h3 className="mt-4 max-w-[370px] text-balance text-3xl font-semibold leading-tight text-[color:var(--section-ink)]">
                         {study.title}
                       </h3>
